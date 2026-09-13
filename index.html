@@ -1,1 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Шахзат — монтаж и установка в Алматы. Кондиционеры от 7 000 ₸, зеркала и кронштейны от 2 000 ₸. Выезд мастера.">
+<meta name="theme-color" content="#05070b">
+<title>Шахзат | Монтаж и установка в Алматы</title>
+<style>
+:root{
+  --bg:#05070b;
+  --bg2:#080d14;
+  --card:#0b111a;
+  --text:#f7f9fc;
+  --muted:#9ca9ba;
+  --blue:#1683ff;
+  --blue2:#53a7ff;
+  --line:#1b2a3b;
+  --green:#25d366;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:
+  radial-gradient(circle at 85% 8%,rgba(22,131,255,.10),transparent 22%),
+  var(--bg);
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.5;
+}
+a{text-decoration:none;color:inherit}
+button,input,select{font:inherit}
+.container{width:min(1120px,92%);margin:auto}
 
+/* HEADER */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(5,7,11,.84);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:950;letter-spacing:-.6px}
+.logo span{color:var(--blue)}
+nav{display:flex;gap:28px;color:#c4cedb;font-size:14px;font-weight:650}
+nav a{transition:.2s}
+nav a:hover{color:#fff}
+.nav-wa{min-height:42px!important;padding:0 17px!important;font-size:13px!important}
+
+/* BUTTONS */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:52px;padding:0 22px;border-radius:12px;
+  font-weight:850;border:1px solid var(--line);
+  transition:.2s;cursor:pointer
+}
+.btn.primary{
+  background:var(--blue);border-color:var(--blue);color:white;
+  box-shadow:0 12px 35px rgba(22,131,255,.22)
+}
+.btn.primary:hover{background:#3b98ff;transform:translateY(-2px)}
+.btn.secondary{background:#0a1018;color:#e2e9f2}
+.btn.secondary:hover{border-color:#3c5874;transform:translateY(-2px)}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;
+  padding:96px 0 92px;
+  min-height:680px;
+  display:flex;align-items:center;
+  background:
+    radial-gradient(circle at 76% 38%,rgba(22,131,255,.20),transparent 29%),
+    radial-gradient(circle at 12% 75%,rgba(11,92,255,.08),transparent 27%)
+}
+.hero:before{
+  content:"";position:absolute;width:600px;height:600px;
+  border:1px solid rgba(22,131,255,.13);border-radius:50%;
+  right:-230px;top:-170px
+}
+.hero:after{
+  content:"";position:absolute;width:280px;height:280px;
+  border:1px solid rgba(22,131,255,.07);border-radius:50%;
+  right:120px;bottom:-200px
+}
+.hero-content{position:relative;z-index:2;max-width:830px}
+.badge{
+  display:inline-flex;gap:8px;align-items:center;
+  padding:8px 13px;border:1px solid #1d3a5d;
+  background:#091522;border-radius:999px;color:#75b9ff;
+  font-size:13px;font-weight:800
+}
+h1{
+  font-size:clamp(44px,7vw,78px);line-height:.96;
+  letter-spacing:-3.7px;max-width:900px;margin:22px 0 22px
+}
+h1 span{color:var(--blue)}
+.hero p{max-width:690px;color:#aeb9c8;font-size:19px;margin:0 0 30px}
+.hero-note{
+  margin-top:22px;color:#738195;font-size:13px;
+  display:flex;gap:18px;flex-wrap:wrap
+}
+.hero-note span{display:inline-flex;align-items:center;gap:6px}
+
+/* TRUST STRIP */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#070b11}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:20px 18px;border-right:1px solid var(--line)}
+.trust-item:last-child{border-right:0}
+.trust-item b{display:block;font-size:15px}
+.trust-item span{display:block;color:#7f8c9d;font-size:12px;margin-top:3px}
+
+/* SECTIONS */
+section{padding:82px 0}
+.section-title{font-size:39px;letter-spacing:-1.7px;margin:0 0 10px}
+.section-sub{color:var(--muted);margin:0 0 34px;max-width:680px}
+
+/* SERVICES */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:linear-gradient(145deg,#0d141d,#080d14);
+  border:1px solid var(--line);border-radius:20px;padding:27px;
+  position:relative;overflow:hidden;transition:.25s
+}
+.card:hover{transform:translateY(-4px);border-color:#294765}
+.card:before{
+  content:"";position:absolute;width:150px;height:150px;border-radius:50%;
+  background:rgba(22,131,255,.08);right:-55px;top:-55px
+}
+.icon{font-size:31px;margin-bottom:19px}
+.card h3{font-size:21px;margin:0 0 8px}
+.card p{color:var(--muted);min-height:52px;margin:0 0 21px;font-size:14px}
+.price{font-size:29px;font-weight:950}
+.price small{font-size:13px;color:#778598;font-weight:650}
+.card-link{display:inline-block;margin-top:20px;color:#70b8ff;font-size:13px;font-weight:800}
+
+/* INCLUDED */
+.included{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.included-card{
+  border:1px solid var(--line);border-radius:20px;padding:27px;background:#090f16
+}
+.included-card h3{margin:0 0 17px;font-size:20px}
+.checks{display:grid;gap:12px}
+.check{display:flex;gap:10px;color:#cbd5e2;font-size:14px}
+.check i{font-style:normal;color:#57aaff;font-weight:900}
+
+/* WHY */
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.feature{
+  padding:22px;border:1px solid var(--line);border-radius:16px;background:#090f16
+}
+.feature .num{font-size:12px;color:#559fe8;font-weight:900;letter-spacing:1px}
+.feature b{display:block;margin:9px 0 5px}
+.feature span{font-size:13px;color:var(--muted)}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.step{
+  padding:24px;border-top:2px solid var(--blue);
+  background:#090f16;border-radius:0 0 15px 15px
+}
+.step strong{font-size:12px;color:#70b8ff;letter-spacing:1px}
+.step h3{margin:7px 0;font-size:18px}
+.step p{margin:0;color:var(--muted);font-size:13px}
+
+/* REQUEST */
+.request-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:start}
+.request-copy h2{font-size:43px;line-height:1.02;letter-spacing:-2px;margin:0 0 13px}
+.request-copy p{color:var(--muted);max-width:430px}
+.contact-box{
+  margin-top:25px;border:1px solid var(--line);border-radius:16px;
+  padding:18px;background:#090f16
+}
+.contact-box small{color:#718095;display:block;margin-bottom:5px}
+.contact-box a{font-size:20px;font-weight:900;color:#75b9ff}
+.form-wrap{
+  background:#0a1018;border:1px solid var(--line);
+  border-radius:22px;padding:27px
+}
+.form{display:grid;gap:13px}
+.form input,.form select,.form textarea{
+  width:100%;background:#060a10;border:1px solid #223248;
+  border-radius:11px;color:#fff;padding:14px 15px;
+  font-size:15px;outline:none
+}
+.form input,.form select{height:52px}
+.form textarea{min-height:110px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--blue)}
+.notice{font-size:12px;color:#718095;margin-top:9px;line-height:1.45}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:900px}
+.faq details{
+  background:#090f16;border:1px solid var(--line);
+  border-radius:14px;padding:18px 20px
+}
+.faq summary{cursor:pointer;font-weight:800}
+.faq p{color:var(--muted);margin:12px 0 0;font-size:14px}
+
+/* CTA */
+.cta{padding:25px 0 82px}
+.cta-box{
+  border:1px solid #164d86;
+  background:
+    radial-gradient(circle at 82% 25%,rgba(22,131,255,.27),transparent 40%),
+    #091420;
+  border-radius:26px;padding:45px;
+  display:flex;align-items:center;justify-content:space-between;gap:30px
+}
+.cta h2{font-size:40px;line-height:1.02;letter-spacing:-1.7px;margin:0 0 9px}
+.cta p{color:var(--muted);margin:0}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:27px 0;color:#788596;font-size:13px}
+.footer{display:flex;justify-content:space-between;gap:15px}
+.footer a{color:#9db4cc}
+
+/* FLOAT */
+.whatsapp-float{
+  position:fixed;right:22px;bottom:22px;z-index:60;
+  width:59px;height:59px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--green);color:#fff;font-size:27px;
+  box-shadow:0 12px 35px rgba(37,211,102,.28);
+  border:2px solid rgba(255,255,255,.12);
+  transition:.2s
+}
+.whatsapp-float:hover{transform:scale(1.06)}
+
+/* MOBILE */
+@media(max-width:850px){
+  nav{display:none}
+  .nav-wa{display:inline-flex!important}
+  .hero{padding:75px 0 65px;min-height:auto}
+  h1{letter-spacing:-2.4px}
+  .hero p{font-size:17px}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .trust-item:nth-child(2){border-right:0}
+  .trust-item:nth-child(3),.trust-item:nth-child(4){border-top:1px solid var(--line)}
+  .grid,.features,.steps,.included,.request-grid{grid-template-columns:1fr}
+  .section-title{font-size:32px}
+  section{padding:62px 0}
+  .request-copy h2{font-size:35px}
+  .cta{padding:5px 0 62px}
+  .cta-box{padding:30px;display:block}
+  .cta h2{font-size:32px}
+  .cta .btn{margin-top:23px;width:100%}
+  .footer{display:block}
+  .footer span{display:block;margin-top:5px}
+}
+@media(max-width:500px){
+  .nav{height:64px}
+  .logo{font-size:20px}
+  .nav-wa{font-size:12px!important}
+  .buttons .btn{width:100%}
+  .hero-note{gap:10px;display:grid}
+  .trust-item{padding:17px 12px}
+  .whatsapp-float{right:16px;bottom:16px}
+}
+
+/* GALLERY */
+.work-gallery{display:grid;grid-template-columns:1.35fr .85fr .85fr;grid-template-rows:240px 240px;gap:14px}
+.work-photo{position:relative;overflow:hidden;border-radius:18px;border:1px solid var(--line);background:#0a1018}
+.work-photo:first-child{grid-row:1 / 3}
+.work-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}
+.work-photo:hover img{transform:scale(1.04)}
+.work-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.62),transparent 48%)}
+.photo-label{position:absolute;z-index:2;left:18px;bottom:15px;font-weight:850;font-size:14px}
+.photo-label span{display:block;color:#9db0c5;font-size:11px;font-weight:600;margin-top:3px}
+.photo-source{margin-top:12px;color:#66778c;font-size:11px}
+@media(max-width:850px){
+  .work-gallery{grid-template-columns:1fr 1fr;grid-template-rows:250px 180px 180px}
+  .work-photo:first-child{grid-row:auto;grid-column:1 / 3}
+}
+@media(max-width:500px){
+  .work-gallery{display:grid;grid-template-columns:1fr;grid-template-rows:260px 210px 210px}
+  .work-photo:first-child{grid-column:auto}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">ШАХЗАТ<span>.</span></a>
+    <nav>
+      <a href="#services">Услуги</a>
+      <a href="#works">Работы</a><a href="#about">Почему мы</a>
+      <a href="#order">Как заказать</a>
+      <a href="#request">Заявка</a>
+    </nav>
+    <a class="btn primary nav-wa" href="https://wa.me/77013018125?text=Здравствуйте!%20Хочу%20заказать%20монтаж.">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="badge">● Алматы · Выезд мастера</div>
+    <h1>Монтаж без<br><span>головной боли.</span></h1>
+    <p>Кондиционеры, зеркала и кронштейны. Шахзат приезжает, делает аккуратно и оставляет после себя готовый результат.</p>
+    <div class="buttons">
+      <a class="btn primary" href="https://wa.me/77013018125?text=Здравствуйте!%20Хочу%20заказать%20монтаж.">📲 Заказать установку</a>
+      <a class="btn secondary" href="tel:+77013018125">☎ Позвонить</a>
+    </div>
+    <div class="hero-note">
+      <span>✓ Прозрачные цены от</span>
+      <span>✓ Работаем по Алматы</span>
+      <span>✓ Заявка прямо в WhatsApp</span>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item"><b>от 2 000 ₸</b><span>зеркала и кронштейны</span></div>
+    <div class="trust-item"><b>от 7 000 ₸</b><span>кондиционеры</span></div>
+    <div class="trust-item"><b>Алматы</b><span>выезд мастера</span></div>
+    <div class="trust-item"><b>WhatsApp</b><span>быстрая связь</span></div>
+  </div>
+</div>
+
+<section id="services">
+<div class="container">
+  <h2 class="section-title">Что устанавливаем</h2>
+  <p class="section-sub">Базовые цены указаны ниже. Перед работой можно отправить фото места установки в WhatsApp для предварительной оценки.</p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="icon">❄️</div>
+      <h3>Кондиционеры</h3>
+      <p>Монтаж и установка кондиционеров с аккуратным выполнением работ.</p>
+      <div class="price">от 7 000 ₸ <small>за установку</small></div>
+      <a class="card-link" href="#request" data-service="Кондиционер">Заказать →</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">🪞</div>
+      <h3>Зеркала</h3>
+      <p>Надёжное крепление зеркал на стену с учётом поверхности и крепежа.</p>
+      <div class="price">от 2 000 ₸ <small>за установку</small></div>
+      <a class="card-link" href="#request" data-service="Зеркало">Заказать →</a>
+    </article>
+
+    <article class="card">
+      <div class="icon">📺</div>
+      <h3>Кронштейны</h3>
+      <p>Монтаж настенных кронштейнов для телевизоров и другой техники.</p>
+      <div class="price">от 2 000 ₸ <small>за установку</small></div>
+      <a class="card-link" href="#request" data-service="Кронштейн">Заказать →</a>
+    </article>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <h2 class="section-title">Что важно перед монтажом</h2>
+  <p class="section-sub">Чтобы быстрее определить стоимость и крепёж, можно заранее прислать несколько деталей.</p>
+
+  <div class="included">
+    <div class="included-card">
+      <h3>📸 Что можно отправить</h3>
+      <div class="checks">
+        <div class="check"><i>✓</i><span>Фото стены или места установки</span></div>
+        <div class="check"><i>✓</i><span>Фото самой техники или зеркала</span></div>
+        <div class="check"><i>✓</i><span>Примерное описание того, что нужно сделать</span></div>
+        <div class="check"><i>✓</i><span>Желаемое время приезда</span></div>
+      </div>
+    </div>
+
+    <div class="included-card">
+      <h3>🛠 Перед выездом</h3>
+      <div class="checks">
+        <div class="check"><i>✓</i><span>Обсуждаем задачу в WhatsApp</span></div>
+        <div class="check"><i>✓</i><span>Согласуем стоимость и время</span></div>
+        <div class="check"><i>✓</i><span>Уточняем особенности поверхности</span></div>
+        <div class="check"><i>✓</i><span>После согласования мастер приезжает на монтаж</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section id="works">
+<div class="container">
+  <h2 class="section-title">Как выглядит хороший монтаж</h2>
+  <p class="section-sub">Для визуального примера добавили бесплатные стоковые фотографии. Это не реальные работы Шахзата. Когда появятся свои фото, заменим их на реальные.</p>
+
+  <div class="work-gallery">
+    <article class="work-photo">
+      <img src="https://images.pexels.com/photos/5463582/pexels-photo-5463582.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Техник работает с кондиционером" loading="lazy">
+      <div class="photo-label">Кондиционеры<span>Аккуратный монтаж и настройка</span></div>
+    </article>
+    <article class="work-photo">
+      <img src="https://images.pexels.com/photos/8538923/pexels-photo-8538923.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Телевизор на настенном кронштейне" loading="lazy">
+      <div class="photo-label">Кронштейны<span>Ровное крепление на стену</span></div>
+    </article>
+    <article class="work-photo">
+      <img src="https://images.pexels.com/photos/6186505/pexels-photo-6186505.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Зеркало на стене в современном интерьере" loading="lazy">
+      <div class="photo-label">Зеркала<span>Чистый и аккуратный результат</span></div>
+    </article>
+    <article class="work-photo">
+      <img src="https://images.pexels.com/photos/5463580/pexels-photo-5463580.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Мастер обслуживает кондиционер" loading="lazy">
+      <div class="photo-label">Работа мастера<span>Инструмент и внимание к деталям</span></div>
+    </article>
+  </div>
+  <div class="photo-source">Фото: Pexels, бесплатные изображения. Источники: Pexels photos 5463582, 8538923, 6186505 и 5463580.</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+  <h2 class="section-title">Почему обращаются к Шахзату</h2>
+  <p class="section-sub">Без громких обещаний. Только понятный процесс: договорились → приехал → установил.</p>
+
+  <div class="features">
+    <div class="feature"><div class="num">01</div><b>Аккуратность</b><span>Внимание к креплениям, поверхности и внешнему виду результата.</span></div>
+    <div class="feature"><div class="num">02</div><b>Понятная цена</b><span>Есть базовые тарифы, а сложность обсуждается заранее.</span></div>
+    <div class="feature"><div class="num">03</div><b>Выезд по Алматы</b><span>Не нужно везти крупную технику или зеркало куда-то ещё.</span></div>
+    <div class="feature"><div class="num">04</div><b>Связь в WhatsApp</b><span>Можно сразу отправить фото и описание задачи.</span></div>
+  </div>
+</div>
+</section>
+
+<section id="order">
+<div class="container">
+  <h2 class="section-title">Как всё происходит</h2>
+  <p class="section-sub">Четыре простых шага без бюрократического квеста.</p>
+
+  <div class="steps">
+    <div class="step"><strong>01 · СВЯЗЬ</strong><h3>Напишите</h3><p>Отправьте сообщение в WhatsApp или позвоните.</p></div>
+    <div class="step"><strong>02 · ЗАДАЧА</strong><h3>Отправьте фото</h3><p>Покажите место установки и расскажите, что нужно сделать.</p></div>
+    <div class="step"><strong>03 · ДОГОВОР</strong><h3>Согласуем</h3><p>Обсудим стоимость и удобное время приезда.</p></div>
+    <div class="step"><strong>04 · МОНТАЖ</strong><h3>Готово</h3><p>Мастер приезжает и выполняет работу.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="request">
+<div class="container request-grid">
+  <div class="request-copy">
+    <h2>Нужен монтаж?<br><span style="color:var(--blue)">Оставьте заявку.</span></h2>
+    <p>Заполните несколько полей. После отправки откроется WhatsApp с уже готовым сообщением для Шахзата.</p>
+
+    <div class="contact-box">
+      <small>Телефон / WhatsApp</small>
+      <a href="tel:+77013018125">+7 701 301 81 25</a>
+    </div>
+  </div>
+
+  <div class="form-wrap">
+    <form class="form" onsubmit="sendWhatsApp(event)">
+      <input id="name" type="text" placeholder="Ваше имя" autocomplete="name" required>
+      <input id="phone" type="tel" placeholder="Ваш номер телефона" autocomplete="tel" required>
+      <select id="service" required>
+        <option value="">Что нужно установить?</option>
+        <option>Кондиционер</option>
+        <option>Зеркало</option>
+        <option>Кронштейн</option>
+        <option>Другое</option>
+      </select>
+      <textarea id="comment" placeholder="Коротко опишите работу или напишите адрес/район"></textarea>
+      <button class="btn primary" type="submit">Отправить заявку в WhatsApp →</button>
+    </form>
+    <div class="notice">Нажатие кнопки не отправляет данные на сервер. Откроется WhatsApp с подготовленным сообщением, и вы сами нажмёте «Отправить».</div>
+  </div>
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+  <h2 class="section-title">Частые вопросы</h2>
+  <div class="faq">
+    <details open>
+      <summary>Сколько стоит установка?</summary>
+      <p>Кондиционеры — от 7 000 ₸. Зеркала и кронштейны — от 2 000 ₸. Итоговая стоимость зависит от конкретной работы и сложности.</p>
+    </details>
+    <details>
+      <summary>Работаете ли вы с выездом?</summary>
+      <p>Да, монтаж выполняется с выездом по Алматы. Время приезда согласовывается заранее.</p>
+    </details>
+    <details>
+      <summary>Можно сначала отправить фото?</summary>
+      <p>Да. Это один из самых удобных способов показать место установки и быстрее обсудить задачу.</p>
+    </details>
+    <details>
+      <summary>Как записаться?</summary>
+      <p>Нажмите любую кнопку WhatsApp, отправьте описание задачи и согласуйте удобное время.</p>
+    </details>
+  </div>
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+  <div class="cta-box">
+    <div>
+      <h2>Есть работа?<br>Давайте обсудим.</h2>
+      <p>Шахзат · монтаж и установка в Алматы</p>
+    </div>
+    <a class="btn primary" href="https://wa.me/77013018125?text=Здравствуйте!%20Хочу%20заказать%20монтаж.">Написать в WhatsApp →</a>
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer">
+    <span>© 2026 Шахзат · Монтаж и установка</span>
+    <span><a href="tel:+77013018125">+7 701 301 81 25</a> · Алматы</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" aria-label="Написать в WhatsApp"
+   href="https://wa.me/77013018125?text=Здравствуйте!%20Хочу%20заказать%20монтаж."
+   title="Написать в WhatsApp">◔</a>
+
+<script>
+function sendWhatsApp(e){
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const service = document.getElementById('service').value;
+  const comment = document.getElementById('comment').value.trim();
+
+  const message =
+    `Здравствуйте! Меня зовут ${name}.\\n` +
+    `Телефон: ${phone}\\n` +
+    `Нужна установка: ${service}.\\n` +
+    (comment ? `Комментарий: ${comment}` : '');
+
+  const url = 'https://wa.me/77013018125?text=' + encodeURIComponent(message);
+  window.open(url, '_blank');
+
+  const notice = document.querySelector('.notice');
+  notice.innerHTML = '✅ <b>Заявка подготовлена!</b><br>WhatsApp открылся в новом окне. Нажмите «Отправить», чтобы Шахзат получил заявку.';
+  notice.style.color = '#75b9ff';
+
+  document.querySelector('.form').reset();
+}
+
+document.querySelectorAll('[data-service]').forEach(link => {
+  link.addEventListener('click', () => {
+    const service = link.getAttribute('data-service');
+    setTimeout(() => {
+      const select = document.getElementById('service');
+      if(select) select.value = service;
+    }, 100);
+  });
+});
+</script>
+
+</body>
+</html>
